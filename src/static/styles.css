@@ -30,15 +30,12 @@ header h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-wrap: nowrap;
+  gap: 20px;
   justify-content: center;
-}
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 section {
@@ -46,8 +43,9 @@ section {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 520px;
 }
 
 section h3 {
