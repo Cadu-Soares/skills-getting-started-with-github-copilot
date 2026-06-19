@@ -30,15 +30,12 @@ header h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-wrap: nowrap;
+  gap: 20px;
   justify-content: center;
-}
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 section {
@@ -46,8 +43,9 @@ section {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 520px;
 }
 
 section h3 {
@@ -72,6 +70,61 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f5f9ff;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.participants-title {
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 0.95em;
+}
+
+.activity-card ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.activity-card ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #e0e0e0;
+  font-size: 0.9em;
+  color: #555;
+  word-break: break-word;
+}
+
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.remove-participant:hover {
+  color: #b71c1c;
+}
+
+.no-participants {
+  margin: 0;
+  color: #999;
+  font-size: 0.9em;
 }
 
 .form-group {
