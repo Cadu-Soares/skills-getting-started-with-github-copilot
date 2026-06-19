@@ -14,3 +14,19 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
+## Executando os testes
+
+- Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+- Rode os testes:
+
+```bash
+pytest -q
+```
+
+Obs: já incluí `pytest` em `requirements.txt` para facilitar a execução dos testes.
+
